@@ -5,7 +5,7 @@
 		        
 		var defaults =
 		{
-			selector: 'o',
+			selector: 'o'
 		}
 		var opts = $.extend(defaults, options);
 		        
