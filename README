@@ -1,3 +1,6 @@
+The plugin will take an element containing some divs and will generate a menu for sliding between them.
+
+
 HTML structure:
 
 <div id="container">
@@ -10,7 +13,14 @@ javascript:
 
 $('#container').wkslider();
 
+parameters:
 
+- css : class attached to the generated menu container
+- activate : class attached to the active menu's selector
+- selector :
+	-- 'number' for numerical menu i.e. (1,2,3,..,n)
+	-- 'character' for alphabetical menu i.e. (a,b,c,…)
+	-- any other string will be used as selector, default is 'o' which will produce (o,o,o,o…)
 
 
 examples of usage: http://jsfiddle.net/KCAZF/2/
