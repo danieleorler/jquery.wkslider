@@ -1,0 +1,16 @@
+HTML structure:
+
+<div id="container">
+	<div>slide 1</div>
+	<div>slide 2</div>
+	<div>slide 2</div>
+</div>
+
+javascript:
+
+$('#container').wkslider();
+
+
+
+
+examples of usage: http://jsfiddle.net/KCAZF/2/
