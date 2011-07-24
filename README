@@ -23,4 +23,4 @@ parameters:
 	-- any other string will be used as selector, default is 'o' which will produce (o,o,o,o…)
 
 
-examples of usage: http://jsfiddle.net/KCAZF/2/
+examples of usage: http://jsfiddle.net/KCAZF/3/
