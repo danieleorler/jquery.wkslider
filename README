@@ -25,4 +25,4 @@ parameters:
 - time: interval of time between a slide and the next during autoplay [default: 3000]
 
 
-examples of usage: http://jsfiddle.net/KCAZF/4/
+examples of usage: http://jsfiddle.net/KCAZF/5/
