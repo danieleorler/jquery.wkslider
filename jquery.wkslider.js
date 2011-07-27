@@ -80,12 +80,13 @@
         {
             var index = $(this).index();
             container.move_selector(index);
-            container.move_slide(index);            
+            container.move_slide(index);
+            window.clearInterval(container.intervals);
         });
         
         if(opts.autoplay)
         {
-            window.setInterval(container.autoslide,opts.time);
+        	container.intervals = window.setInterval(container.autoslide,opts.time);
         }
                 
     }
