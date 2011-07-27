@@ -7,8 +7,9 @@
         {
         	css		: 'slider_menu',
             selector: 'o',
-            autoplay: true,
-            activate: 'active'
+            autoplay: false,
+            activate: 'active',
+            time	: 3000
         }
         var opts = $.extend(defaults, options);
                 
@@ -84,7 +85,7 @@
         
         if(opts.autoplay)
         {
-            window.setInterval(container.autoslide,3000);
+            window.setInterval(container.autoslide,opts.time);
         }
                 
     }
