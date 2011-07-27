@@ -22,7 +22,7 @@ parameters:
 	-- 'character' for alphabetical menu i.e. (a,b,c,..)
 	-- any other string will be used as selector, default is 'o' which will produce (o,o,o,o,..)
 - autoplay : makes plugin slides on his own [default: false]
-- time: interval of time between a slide and the next during autopsy [default: 3000]
+- time: interval of time between a slide and the next during autoplay [default: 3000]
 
 
 examples of usage: http://jsfiddle.net/KCAZF/4/
