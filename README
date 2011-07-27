@@ -19,8 +19,8 @@ parameters:
 - activate : class attached to the active menu's selector [default: 'active']
 - selector :
 	-- 'number' for numerical menu i.e. (1,2,3,..,n)
-	-- 'character' for alphabetical menu i.e. (a,b,c,…)
-	-- any other string will be used as selector, default is 'o' which will produce (o,o,o,o…)
+	-- 'character' for alphabetical menu i.e. (a,b,c,..)
+	-- any other string will be used as selector, default is 'o' which will produce (o,o,o,o,..)
 - autoplay : makes plugin slides on his own [default: false]
 - time: interval of time between a slide and the next during autopsy [default: 3000]
 
