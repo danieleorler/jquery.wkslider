@@ -2,6 +2,16 @@
 {
     $.fn.wkslider = function(options)
     {
+        //store 'this' element for scoping
+        var container = this;
+        var divs = this.children('div');    	
+        //numbers of slides
+        var n = divs.length;
+        
+        //if there are less than 2 slides there is no need of the slider
+    	if(n < 2)
+    		return this;
+    	
         //defaults    
         var defaults =
         {
@@ -40,13 +50,6 @@
             container.move_selector(step);
             container.move_slide(step);
         }
-                
-        //store 'this' element for scoping
-        var container = this;
-        var divs = this.children('div');
-
-        //numbers of slides
-        var n = divs.length;
                 
         //display just the first slide
         divs.hide().eq(0).show();
