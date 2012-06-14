@@ -91,6 +91,12 @@
         {
         	container.intervals = window.setInterval(container.autoslide,opts.time);
         }
+
+        $(window).unload(function()
+        {
+            clearInterval(container.intervals);
+            container.intervals = null;
+        });
                 
     }
 })(jQuery);
