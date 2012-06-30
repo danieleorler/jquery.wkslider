@@ -1,4 +1,4 @@
-The plugin will take an element containing some divs and will generate a menu for sliding between them.
+The plugin will take an element containing some other elements and will generate a menu for sliding between them.
 
 
 HTML structure:
@@ -9,20 +9,29 @@ HTML structure:
 	<div>slide 2</div>
 </div>
 
+or
+
+<ul id="container">
+	<li>slide 1</li>
+	<li>slide 2</li>
+	<li>slide 2</li>
+</ul>
+
 javascript:
 
 $('#container').wkslider();
 
 parameters:
 
-- css : class attached to the generated menu container [defalut: 'slider_menu']
-- activate : class attached to the active menu's selector [default: 'active']
-- selector :
+- slideElement		: the slide element tagName
+- menuClass			: class attached to the generated menu container [defalut: 'slider_menu']
+- activate			: class attached to the active menu's selector [default: 'active']
+- selector 			:
 	-- 'number' for numerical menu i.e. (1,2,3,..,n)
 	-- 'character' for alphabetical menu i.e. (a,b,c,..)
 	-- any other string will be used as selector, default is 'o' which will produce (o,o,o,o,..)
-- autoplay : makes plugin slides on his own [default: false]
-- time: interval of time between a slide and the next during autoplay [default: 3000]
+- autoplay			: makes plugin slides on his own [default: false]
+- time				: interval of time between a slide and the next during autoplay [default: 3000]
 
 
 examples of usage: http://jsfiddle.net/KCAZF/5/
