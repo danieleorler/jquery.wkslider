@@ -81,20 +81,31 @@
             this.moveSelector();
             this.container.append(this.sliderMenu);
 
+            /* move slider via selectors */
             var container = this;
             this.sliderMenu.children('li').on('click',function()
             {
                 var index = $(this).index();
-                container.moveSelector(index);
                 container.moveSlide(index);
                 window.clearInterval(container.intervals);
             });
 
+            /* move slider automatically */
             if(this.options.autoplay)
             {
                 var that = this;
                 this.intervals = window.setInterval(function(){that.autoslide();},this.options.time);
             }
+
+            /* move slider via swipe (mobile) */
+            $(document).on("swipeleft",function()
+            {
+                container.swipeTo(container.getActiveIndex()+1);
+            });
+            $(document).on("swiperight",function()
+            {
+                container.swipeTo(container.getActiveIndex()-1);
+            });
 
             //when the slider is not visible the stop it
             $(window).bind('blur',function()
@@ -112,6 +123,7 @@
 
     Plugin.prototype.moveSlide = function(i)
     {
+        this.moveSelector(i);
         var slides = this.slides;
         this.effects[this.options.effect](slides,i);
     }
@@ -125,9 +137,18 @@
     {
         var start = this.getActiveIndex();
         var step = (start+1)%this.slidesNumber;
-        this.moveSelector(step);
         this.moveSlide(step);
     };
+
+    Plugin.prototype.swipeTo = function(i)
+    {
+        if(i < 0)
+            i = this.slidesNumber-1;
+        if(i >= this.slidesNumber)
+            i = 0;
+        console.log(i);
+        this.moveSlide(i);
+    }
 
     // A really lightweight plugin wrapper around the constructor, 
     // preventing against multiple instantiations
